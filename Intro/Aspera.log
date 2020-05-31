@@ -1,0 +1,43 @@
+/var/log/aspera/lsnk-lcp1-replica/*.log 
+{
+   size 50M
+   rotate 15
+   copytruncate
+   postrotate
+   chmod 644 /var/log/aspera || true
+   endscript
+   compress
+}
+
+/var/log/aspera/lny2-lcp1-replica
+{
+   size 50M
+   rotate 15
+   copytruncate
+   postrotate
+   chmod 644 /var/log/aspera || true
+   endscript
+   compress
+}
+
+/var/log/aspera/wip-lsnk-replica/cmd.log 
+{
+   su root root
+   size 100M
+   rotate 15
+   copytruncate
+   postrotate
+   chmod 644 /var/log/aspera || true
+   endscript
+   compress
+}
+
+/var/log/aspera.log {
+   size 100M
+   rotate 20
+   copytruncate
+   postrotate
+   chmod 644 /var/log/aspera || true
+   endscript
+   compress
+ 
